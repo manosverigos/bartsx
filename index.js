@@ -34,7 +34,7 @@ document
     const password = document.getElementById("password").value;
 
     if (email == "doctor@nhs.net" && password == "password") {
-      window.location.replace("/");
+      window.location.replace("/record.html");
     } else {
       document.getElementById("message").textContent =
         "The credentials you provided are wrong.";

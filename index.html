@@ -17,233 +17,89 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>Medical Record</title>
     <script src="index.js" defer></script>
+    <title>Emergency</title>
   </head>
   <body>
     <div class="header">
-      <h2>Medical Record</h2>
+      <h2>Medical Emergency</h2>
     </div>
     <div class="main">
-      <div class="patientDetails container">
-        <h1 class="heading">Patient Details</h1>
-        <table class="">
-          <tbody>
-            <tr class="">
-              <td>Name</td>
-              <td class="detailsHeader">John Smith</td>
-            </tr>
-            <tr>
-              <td>Date of Birth</td>
-              <td class="detailsHeader">01/01/1980</td>
-            </tr>
-            <tr>
-              <td>NHS Number</td>
-              <td class="detailsHeader">123456789</td>
-            </tr>
-            <tr>
-              <td>Next of Kin</td>
-              <td class="detailsHeader">Adam Smith</td>
-            </tr>
-            <tr>
-              <td>NoK Contact Number</td>
-              <td class="detailsHeader">0123456789</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="paragraphContainer">
+        <p>You scanned a medical bracelet.</p>
       </div>
-      <div class="diagnoses container">
-        <h1 class="heading">Diagnoses</h1>
-        <div class="tableContainer">
-          <table class="table recordTable">
-            <thead>
-              <tr>
-                <th>Diagnosis</th>
-                <th>Date Diagnosed</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Epilepsy</td>
-                <td>04/2021</td>
-                <td class="active">Active</td>
-              </tr>
-              <tr>
-                <td>Hypertension</td>
-                <td>02/2012</td>
-                <td class="active">Active</td>
-              </tr>
-              <tr>
-                <td>Type 2 Diabetes</td>
-                <td>10/2013</td>
-                <td class="active">Active</td>
-              </tr>
-              <tr>
-                <td>Colorectal Cancer</td>
-                <td>08/2015</td>
-                <td>Inactive</td>
-              </tr>
-              <tr>
-                <td>Gallstones</td>
-                <td>11/2017</td>
-                <td>Inactive</td>
-              </tr>
-            </tbody>
-          </table>
+
+      <div id="locationContainer" class="hidden">
+        <div class="locationContainer">
+          <div class="rounded shadow locationTable">
+            <h3>Location</h3>
+            <table class="">
+              <tbody>
+                <tr class="">
+                  <td>Latitude</td>
+                  <td class="detailsHeader" id="latitude"></td>
+                </tr>
+                <tr>
+                  <td>Longitude</td>
+                  <td class="detailsHeader" id="longitude"></td>
+                </tr>
+                <tr>
+                  <td>Accuracy</td>
+                  <td class="detailsHeader" id="accuracy"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
-      <div class="medication container">
-        <h1 class="heading">Drug Treatment</h1>
-        <div class="tableContainer">
-          <table class="table recordTable">
-            <thead>
-              <tr>
-                <th>Diagnosis</th>
-                <th>Dose</th>
-                <th>Date Started</th>
-                <th>Status</th>
-                <th>BNF</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Sodium Valproate</td>
-                <td>500mg BD</td>
-                <td>04/2021</td>
-                <td class="active">Active</td>
-                <td>
-                  <a
-                    target="”_blank”"
-                    href="https://bnf.nice.org.uk/drug/sodium-valproate.html"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      fill="currentColor"
-                      class="bi bi-box-arrow-up-right"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"
-                      />
-                      <path
-                        fill-rule="evenodd"
-                        d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"
-                      />
-                    </svg>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>Amlodipine</td>
-                <td>10mg OD</td>
-                <td>02/2012</td>
-                <td class="active">Active</td>
-                <td>
-                  <a
-                    target="”_blank”"
-                    href="https://bnf.nice.org.uk/drug/amlodipine.html"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      fill="currentColor"
-                      class="bi bi-box-arrow-up-right"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"
-                      />
-                      <path
-                        fill-rule="evenodd"
-                        d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"
-                      />
-                    </svg>
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>Metformin</td>
-                <td>500mg BD</td>
-                <td>10/2013</td>
-                <td class="active">Active</td>
-                <td>
-                  <a
-                    target="”_blank”"
-                    href="https://bnf.nice.org.uk/drug/metformin-hydrochloride.html"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      fill="currentColor"
-                      class="bi bi-box-arrow-up-right"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"
-                      />
-                      <path
-                        fill-rule="evenodd"
-                        d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"
-                      />
-                    </svg>
-                  </a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+      <div class="headingContainer splashContainer">
+        <h3>Are you:</h3>
+      </div>
+      <div class="splashContainer">
+        <h1 class="heading">A Bystander ?</h1>
+        <div>
+          <ol>
+            <li>
+              In case of medical emergency,
+              <span class="emergencyCall">call 999</span>.
+            </li>
+            <li>Relay information about the patient and the location.</li>
+            <li>Wait by the patient until help comes.</li>
+          </ol>
         </div>
       </div>
-      <div class="allergies container">
-        <h1 class="heading">Allergies</h1>
-        <div class="tableContainer">
-          <table class="table recordTable">
-            <thead>
-              <tr>
-                <th>Allergy</th>
-                <th>Date Diagnosed</th>
-                <th>Severity</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Peanuts</td>
-                <td>09/2012</td>
-                <td class="active">Severe</td>
-              </tr>
-              <tr>
-                <td>Morphine</td>
-                <td>02/2016</td>
-                <td class="moderate">Moderate</td>
-              </tr>
-            </tbody>
-          </table>
+      <div class="splashContainer">
+        <h1 class="heading">A Medical Professional ?</h1>
+        <div>
+          <div class="mt-2 mb-5">
+            Login with your NHS email to access the patient's medical record.
+          </div>
+          <form class="emailForm">
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" />
+            </div>
+
+            <button id="submitButton" class="btn btn-primary">
+              Login
+            </button>
+          </form>
+          <div id="message"></div>
         </div>
       </div>
     </div>
-    <div class="footer border-top border-1">
+    <div class="footer">
       <div class="linkContainer">
-        <span class="link">Click here for more patient information</span>
-        <span
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-arrow-right"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
-            /></svg></span>
+        <span class="link">Powered by</span>
       </div>
     </div>
     <script
