@@ -1,0 +1,197 @@
+body,
+div,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+input {
+  border: 1px solid #b0b0b0;
+  padding: 3px 5px 4px;
+  color: #979797;
+  width: 190px;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+q:before,
+q:after {
+  content: "";
+}
+abbr,
+acronym {
+  border: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  height: 6rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.footer {
+  height: 3rem;
+  width: 100%;
+  background-color: rgb(238, 233, 233);
+  box-shadow: inset 0px 0px 5px 0px #ababab;
+  -webkit-box-shadow: inset 0px 0px 5px 0px #ababab;
+  -moz-box-shadow: inset 0px 0px 5px 0px #ababab;
+  -o-box-shadow: inset 0px 0px 5px 0px #ababab;
+}
+
+/* .container{
+  margin-left: 10px;
+} */
+
+.heading {
+  padding: 25px 0 5px 0;
+  font-weight: lighter;
+  font-size: 32px;
+}
+
+.detailsHeader {
+  font-weight: 600;
+  padding-left: 15px;
+  padding-top: 7px;
+}
+/* .tableContainer {
+  padding-right: 10px;
+} */
+
+.active {
+  color: red;
+}
+.moderate {
+  color: orange;
+}
+.linkContainer {
+  margin-left: 10px;
+  padding-top: 10px;
+}
+
+.link {
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.patientDetails {
+  margin-bottom: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+.headingContainer {
+  margin-top: 40px;
+}
+
+.emergencyCall {
+  font-weight: 500;
+  font-size: 24px;
+  color: rgb(235, 34, 34);
+}
+
+.splashContainer {
+  margin-left: 10px;
+}
+
+.locationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.locationTable {
+  width: 90%;
+  padding: 5px;
+}
+
+.paragraphContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.emailForm {
+  margin-right: 10px;
+}
+
+#message {
+  margin-top: 5px;
+}
