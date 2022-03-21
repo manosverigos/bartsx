@@ -1,4 +1,4 @@
-if ("geolocation" in navigator) {
+
   var options = {
     enableHighAccuracy: true,
     timeout: 5000,
@@ -24,7 +24,7 @@ if ("geolocation" in navigator) {
   }
 
   navigator.geolocation.getCurrentPosition(success, error, options);
-}
+
 
 document
   .getElementById("submitButton")
