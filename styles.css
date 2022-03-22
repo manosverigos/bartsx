@@ -101,7 +101,7 @@ h2 {
 }
 
 .footer {
-  height: 3rem;
+  height: 5rem;
   width: 100%;
   background-color: rgb(238, 233, 233);
   box-shadow: inset 0px 0px 5px 0px #ababab;
@@ -195,4 +195,8 @@ h3 {
 
 #message {
   margin-top: 5px;
+}
+
+.admissionsTable {
+  overflow-x: scroll;
 }
